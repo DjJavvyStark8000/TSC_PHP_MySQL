@@ -1,0 +1,19 @@
+-- Crear la base de datos "REGISTROSDB"
+CREATE DATABASE IF NOT EXISTS REGISTROSDB;
+
+-- Seleccionar la base de datos "REGISTROSDB"
+USE REGISTROSDB;
+
+-- Crear la tabla "REGISTROS" con los atributos NOMBRE, APELLIDO, CORREO y CLAVE
+CREATE TABLE IF NOT EXISTS REGISTROS (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NOMBRE VARCHAR(255) NOT NULL,
+    APELLIDO VARCHAR(255) NOT NULL,
+    CORREO VARCHAR(255) NOT NULL,
+    CLAVE VARCHAR(255) NOT NULL
+);
+
+-- Insertar dos registros aleatorios
+INSERT INTO REGISTROS (NOMBRE, APELLIDO, CORREO, CLAVE) VALUES
+('Juan', 'Perez', 'juan@example.com', 'clave123'),
+('Maria', 'Lopez', 'maria@example.com', 'password456');
